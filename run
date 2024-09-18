@@ -1,0 +1,4 @@
+#!/bin/bash 
+echo "Starting Nginx..." 
+# Start Nginx in the foreground 
+exec nginx -g 'daemon off;'

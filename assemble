@@ -1,0 +1,7 @@
+#!/bin/bash 
+set -e echo "Assembling the application..." 
+# Create the destination directory if it doesn't exist 
+mkdir -p /usr/share/nginx/html/ 
+# Copy the index.html file from the source directory to Nginx's web root 
+cp -Rf /tmp/src/index.html /usr/share/nginx/html/ 
+echo "Application assembled successfully."  
