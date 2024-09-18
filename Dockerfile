@@ -5,9 +5,8 @@ FROM default-route-openshift-image-registry.apps.mp-dev.bluvalt.com/javeed/nginx
 RUN mkdir -p /usr/libexec/s2i
  
 # Copy S2I scripts into the image
-COPY ./s2i/bin/assemble /usr/libexec/s2i/assemble
-COPY ./s2i/bin/run /usr/libexec/s2i/run
-COPY ./s2i/bin/save-artifacts /usr/libexec/s2i/save-artifacts
+COPY assemble /usr/libexec/s2i/assemble
+COPY run /usr/libexec/s2i/run
  
 # Make sure the scripts are executable
 RUN chmod +x /usr/libexec/s2i/*
